@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "name": "Dashboard",
+        "link": "/"
+    },{
+        "id": 2,
+        "name": "Account",
+        "link": "/"
+    }
+]
