@@ -12,7 +12,7 @@ const PieChartPortfolio = (props) => {
 
     let dataset = []
     data.map((val) => {
-        dataset.push( val?.marketValue)
+        dataset.push( val?.marketValue.toFixed(3) )
     })
 
     const barData = {
