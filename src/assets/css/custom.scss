@@ -3,7 +3,8 @@
         height: calc(100% - 60px)
     }
     #sidebar-wrapper {
-        background-color: #f8f9fa;
+        background-color: #181818;
+        border-right: 1px solid #2c2c2c;
         padding-right: 0px;
         padding-left: 0px;
         .active-left-menu {
@@ -12,15 +13,16 @@
 
         .left-menu-card {
             border: unset;
-            background:  #f8f9fa;
+            background-color: #181818;
+            
             a {
                 text-decoration: none;
+                color: #fff;
             }
             .card-header {
                 background-color: unset;
                 padding: 0.5rem 1.25rem !important;
                 &.active-panel {
-                    background-color: #e7edef;
                     &.card-header {
                         padding: 0.5rem 1rem !important;
                     }
@@ -31,7 +33,7 @@
                 .card-text {
                     font-style: normal;
                     font-size: 16px;
-                    color: #000;
+                    color: #fff;
                 }
             }
         }
@@ -48,6 +50,39 @@
         overflow: hidden;
         background: rgb(2,0,36);
         background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(52,131,91,1) 83%, rgba(82,201,141,1) 100%);
+    }
+    .portfolio-card {
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(52,131,91,1) 83%, rgba(82,201,141,1) 100%);
+
+        .card-title {
+            color: #fff;
+            padding: 20px;
+        }
+        .card-currency {
+            padding: 3px !important;
+            font-weight: bold;
+        }
+        .card-subtitle {
+            color: #fff;
+            padding-left: 5px;
+            font-size: 10px;
+        }
+        .card-detail {
+            border-right: 1px solid #fff;
+        }
+    }
+
+    .pie-chart {
+        height: 190px;
+    }
+
+    .navbar-dark {
+        background-color: #181818 !important;
+        border-bottom: 1px solid #2c2c2c;
+    }
+    #page-content-wrapper {
+        background-color: #1e1e1e;
     }
     .global-section-container {
         width: 100%;
@@ -140,7 +175,7 @@
     }
 
     .header-title {
-        color: #1a365d;
+        color: #fff;
         font-size: 28px;
         font-weight: bold;
     }
@@ -170,6 +205,19 @@
                 border-bottom-right-radius: 0px !important;
             }
         }
+
+        #sidebar-wrapper {
+            border-left: 1px solid #2c2c2c;
+            border-right: 0px !important;
+        }
+
+        .portfolio-card {
+            .card-detail {
+                border-left: 1px solid #fff !important;
+                border-right: 0 !important;
+            }
+        }
+
     }
     .login-card{
         height: 370px;

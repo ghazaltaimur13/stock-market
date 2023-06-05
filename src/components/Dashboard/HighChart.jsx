@@ -23,17 +23,34 @@ const HighChart = (props) => {
 
     const options = {
         chart: {
-          type: 'line'
+          type: 'line',
+          backgroundColor: '#181818'
         },
         title: {
-          text: t('Market Value Chart')
+          text: t('Market Value Chart'),
+          style:{
+            color: 'white',
+            fontWeight: 'bold'
+          }
         },
         series: dataset,
         xAxis: {
             categories: data[0]?.values.map((val) => {
                 return moment(val.key).format("DD-MMM-YY");
-            })
+            }),
+            labels: {
+              style: {
+                  color: 'white'
+              }
+            }
         },
+        yAxis: {
+          labels: {
+            style: {
+                color: 'white'
+            }
+          }
+      },
         tooltip: {
             formatter: function() {
               // Custom tooltip formatting logic here

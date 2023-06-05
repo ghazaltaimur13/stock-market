@@ -12,6 +12,8 @@ import StatsCard from "components/Dashboard/StatsCard"
 import PortfolioDetail from './PortfolioDetail';
 import LineChart from "./LineChart";
 import HighChart from "./HighChart";
+import PieChartPortfolio from "./PieChartPortfolio";
+
 
 function Dashboard() {
     const { t } = useTranslation();
@@ -41,9 +43,18 @@ function Dashboard() {
                     { t('Portfolio Valuation')}
                 </Col>
             </Row>
-            { userPortfolio && userPortfolio?.securityValuations?.length > 0 && 
-                <PortfolioDetail userPortfolio={userPortfolio} />
-            }
+            <Row  className="m-3">
+                <Col sm="9">
+                { userPortfolio && userPortfolio?.securityValuations?.length > 0 && 
+                    <PortfolioDetail userPortfolio={userPortfolio} />
+                }
+                </Col>
+                <Col sm="3" className="pie-chart d-flex justify-content-center">
+                { userPortfolio && userPortfolio?.securityValuations?.length > 0 && 
+                    <PieChartPortfolio securityValuations={userPortfolio?.securityValuations} />
+                }
+                </Col>
+            </Row>
             <Row className="m-3">
                 { userPortfolio && userPortfolio?.securityValuations?.length > 0 &&
                  userPortfolio?.securityValuations.map((securityValuation, index) => (

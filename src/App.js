@@ -19,6 +19,32 @@ import "./assets/css/index.scss";
 import './App.css';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+    Colors,
+    ArcElement
+} from 'chart.js';
+import ChartDataLabels from "chartjs-plugin-datalabels";
+
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+    Colors,
+    ArcElement,
+    ChartDataLabels
+);
 
 function App() {
   const { authToken } = useAuth();

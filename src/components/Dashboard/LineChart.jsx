@@ -1,30 +1,8 @@
 
 import React, { memo } from "react";
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-    Colors
-} from 'chart.js';
 import { Line } from "react-chartjs-2";
 import moment from "moment";
 import { useTranslation } from "react-i18next";
-
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-    Colors
-);
 
 const LineChart = (props) => {
     var data = props.securityTimeSeries;
@@ -43,6 +21,9 @@ const LineChart = (props) => {
           colors: {
             enabled: true,
             forceOverride: true
+          },
+          datalabels: {
+            display: false,
           }
         },
     };
