@@ -279,6 +279,15 @@
         }
             
     }
+
+    .back-button {
+        background-color: #34835b;
+        min-width: 15%;
+        &:hover{
+            color: black;
+            background-color: white;
+        }
+    }
 }
 
 @media only screen and (max-width: 767px) {

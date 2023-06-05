@@ -11,6 +11,7 @@ import StatsCard from "components/Dashboard/StatsCard"
 import TransactionHistory from "components/StockDetail/TransactionHistory";
 import PortfolioDetail from 'components/Dashboard/PortfolioDetail';
 import { DASHBOARD } from "constants/navigationConstants";
+import PieChartPortfolio from "components/Dashboard/PieChartPortfolio";
 
 function StockDetail() {
     const { t } = useTranslation();
@@ -27,7 +28,7 @@ function StockDetail() {
     }
     useEffect(() => {
         fetchData(id)
-    }, [id]);
+    }, [id, currency]);
 
     const fetchSecurityData = async (securityIds) => {
         const res = await getUserSecurity(userToken, securityIds, userPortfolio?.portfolio?.id);
@@ -53,9 +54,18 @@ function StockDetail() {
                     { t('Portfolio Valuation')}
                 </Col>
             </Row>
-            { userPortfolio && userPortfolio?.securityValuations?.length > 0 && 
-                <PortfolioDetail userPortfolio={userPortfolio} />
-            }
+            <Row  className="m-3">
+                <Col sm="9">
+                { userPortfolio && userPortfolio?.securityValuations?.length > 0 && 
+                    <PortfolioDetail userPortfolio={userPortfolio} />
+                }
+                </Col>
+                <Col sm="3" className="pie-chart d-flex justify-content-center">
+                { userPortfolio && userPortfolio?.securityValuations?.length > 0 && 
+                    <PieChartPortfolio securityValuations={userPortfolio?.securityValuations} />
+                }
+                </Col>
+            </Row>
             <Row className="m-3">
                 { userPortfolio && userPortfolio?.securityValuations?.length > 0 &&
                  userPortfolio?.securityValuations.map((securityValuation, index) => (

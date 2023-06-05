@@ -86,6 +86,7 @@ function TransactionHistory(props) {
                 />
                 <Button 
                     variant="dark"
+                    className="back-button"
                     onClick={() => props.backHistory()}
                 > 
                     { t('Go Back') }
