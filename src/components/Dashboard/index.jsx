@@ -21,20 +21,17 @@ function Dashboard() {
     const userToken = localStorage.getItem('accessToken');
     const currency = localStorage.getItem('currency');
     const [userPortfolio, setUserPortfolio] = useState(false);
-    const [userNotification, setUserNotification] = useState(false);
     const navigate = useNavigate();
 
     const fetchData = async (securityIds) => {
         const res = await getUserPortfolio(userToken, currency, securityIds);
         setUserPortfolio(res);
+        return res;
     }
     useEffect(() => {
-        fetchData()
-        console.log('im here',userNotification)
-        if(!userNotification) {
-            toast('Hello, world!');
-            setUserNotification(true)
-        }
+        fetchData().then((value) => {
+            toast('Welcome '+value?.portfolio?.investor?.name+' , Your total investment is: '+value?.marketValue.toFixed(3)+' '+value?.currencyCode);
+        });
     }, [currency]);
 
 
