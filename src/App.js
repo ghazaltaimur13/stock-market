@@ -7,6 +7,7 @@ import { useAuth } from "contexts/AuthContext";
 import AuthedRoute from "components/Auth";
 import LoginPage from "pages/LoginV2/LoginV2";
 import DashboardPage from "pages/Dashboard/Dashboard";
+import AccountPage from "pages/Account/Account";
 import StockDetailPage from "pages/StockDetail/StockDetail";
 import {
     importFromLocalStorageKey
@@ -87,7 +88,7 @@ function App() {
                         <AuthedRoute component={<StockDetailPage currency={curr} />} changeCurrency={changeCurrency} />
                     } />
                     <Route path={navigationConstants.ACCOUNT} exact element={
-                        <AuthedRoute component={<DashboardPage currency={curr} />} changeCurrency={changeCurrency} />
+                        <AuthedRoute component={<AccountPage currency={curr} />} changeCurrency={changeCurrency} />
                     } />
                 </Routes>
             </BrowserRouter>

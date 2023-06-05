@@ -16,7 +16,7 @@ function PortfolioDetail(props) {
                     <div className="d-flex align-items-center mb-7">
                         <Card.Img src="https://images.unsplash.com/photo-1634926878768-2a5b3c42f139"     
                             className="rounded-circle mr-3"
-                            alt="Avatar"
+                            alt={ userPortfolio?.portfolio?.investor?.name}
                             style={{ width: '50px', height: '50px' }} />
                         <Card.Title as="h4"> { t('Welcome') } { userPortfolio?.portfolio?.investor?.name}</Card.Title>
                     </div>

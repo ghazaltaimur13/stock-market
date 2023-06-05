@@ -2,10 +2,12 @@
     {
         "id": 1,
         "name": "Dashboard",
-        "link": "/"
+        "link": "/",
+        "icon": "fas fa-thin fa-house"
     },{
         "id": 2,
         "name": "Account",
-        "link": "/account"
+        "link": "/account",
+        "icon": "fas fa-solid fa-user"
     }
 ]

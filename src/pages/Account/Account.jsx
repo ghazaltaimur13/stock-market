@@ -1,9 +1,9 @@
 import React from "react";
-import Dashboard from "components/Dashboard/index";
+import Account from "components/Account/index";
 
 function AccountPage() {
 	return (
-		<Dashboard />
+		<Account />
 	);
 }
 

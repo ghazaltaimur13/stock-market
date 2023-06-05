@@ -22,6 +22,10 @@
             .card-header {
                 background-color: unset;
                 padding: 0.5rem 1.25rem !important;
+                i {
+                    padding-top: 11px;
+                    font-size: 16px;
+                }
                 &.active-panel {
                     &.card-header {
                         padding: 0.5rem 1rem !important;
@@ -179,6 +183,10 @@
         font-size: 28px;
         font-weight: bold;
     }
+    .header-sub-title {
+        color: gray;
+        font-size: 12px;
+    }
     .portfolio-detail {
         background-color: black;
         color: #fff;
@@ -286,6 +294,31 @@
         &:hover{
             color: black;
             background-color: white;
+        }
+    }
+    .card-profile {
+        border: 1px solid #2c2c2c;
+        background: unset;
+        .card-body {
+            padding: 0px;
+            .card-img {
+                height: 300px;
+            }
+            .profile-center-area {
+                margin-top: -3rem;
+                color: #fff;
+            }
+            .icon {
+                color: #34835b;
+                font-size: 30px;
+            }
+            .card-title {
+                color: #fff;
+            }
+            .card-subtitle {
+                color: #fff;
+                font-size: 12px;
+            }
         }
     }
 }
