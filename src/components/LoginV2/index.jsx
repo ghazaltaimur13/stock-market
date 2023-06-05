@@ -62,10 +62,10 @@ function LoginV2() {
             <Card className="login-card">
                 <Card.Header>
                     <h3>{t("Login")}</h3>
-                    <div class="d-flex justify-content-end social_icon">
-                        <span><i class="fab fa-facebook-square"></i></span>
-                        <span><i class="fab fa-google-plus-square"></i></span>
-                        <span><i class="fab fa-twitter-square"></i></span>
+                    <div className="d-flex justify-content-end social_icon">
+                        <span><i className="fab fa-facebook-square"></i></span>
+                        <span><i className="fab fa-google-plus-square"></i></span>
+                        <span><i className="fab fa-twitter-square"></i></span>
                     </div>
                 </Card.Header>
                 <Card.Body>
@@ -76,7 +76,7 @@ function LoginV2() {
                                     <Form.Label className="mb-2">{t('Username')}</Form.Label>
                                     <InputGroup>
                                         <InputGroup.Text>
-                                            <i class="fas fa-user"></i>
+                                            <i className="fas fa-user"></i>
                                         </InputGroup.Text>
                                         <Form.Control 
                                             type="text"
@@ -98,7 +98,7 @@ function LoginV2() {
                                     <Form.Label className="mb-2">{t('Password')}</Form.Label>
                                     <InputGroup>
                                         <InputGroup.Text>
-                                            <i class="fas fa-key"></i>
+                                            <i className="fas fa-key"></i>
                                         </InputGroup.Text>
                                         <Form.Control 
                                             type="password"

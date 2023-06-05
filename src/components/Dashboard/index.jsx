@@ -13,6 +13,7 @@ import PortfolioDetail from './PortfolioDetail';
 import LineChart from "./LineChart";
 import HighChart from "./HighChart";
 import PieChartPortfolio from "./PieChartPortfolio";
+import { toast } from 'react-toastify';
 
 
 function Dashboard() {
@@ -20,6 +21,7 @@ function Dashboard() {
     const userToken = localStorage.getItem('accessToken');
     const currency = localStorage.getItem('currency');
     const [userPortfolio, setUserPortfolio] = useState(false);
+    const [userNotification, setUserNotification] = useState(false);
     const navigate = useNavigate();
 
     const fetchData = async (securityIds) => {
@@ -28,7 +30,13 @@ function Dashboard() {
     }
     useEffect(() => {
         fetchData()
+        console.log('im here',userNotification)
+        if(!userNotification) {
+            toast('Hello, world!');
+            setUserNotification(true)
+        }
     }, [currency]);
+
 
     const securityCheckboxChange = async (event, securityIds, forcefully) => {
         if(!event.target.checked && !forcefully)

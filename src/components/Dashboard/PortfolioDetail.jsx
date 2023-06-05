@@ -13,30 +13,30 @@ function PortfolioDetail(props) {
         <Card className="position-relative portfolio-card">
             <Row className="m-3">
                 <Col  sm="8">
-                    <div class="d-flex align-items-center mb-7">
+                    <div className="d-flex align-items-center mb-7">
                         <Card.Img src="https://images.unsplash.com/photo-1634926878768-2a5b3c42f139"     
                             className="rounded-circle mr-3"
                             alt="Avatar"
                             style={{ width: '50px', height: '50px' }} />
                         <Card.Title as="h4"> { t('Welcome') } { userPortfolio?.portfolio?.investor?.name}</Card.Title>
                     </div>
-                    <div class="d-flex align-items-center">
-                        <div class="card-detail px-2 border-muted border-opacity-10">
+                    <div className="d-flex align-items-center">
+                        <div className="card-detail px-2 border-muted border-opacity-10">
                             <Card.Title as="h3" className="card-currency"> { userPortfolio?.marketValue.toFixed(3)} </Card.Title>
                             <Card.Subtitle>{ t('Portfolio Value') }</Card.Subtitle>
                         </div>
-                        <div class="card-detail px-2 border-muted border-opacity-10">
+                        <div className="card-detail px-2 border-muted border-opacity-10">
                             <Card.Title as="h3" className="card-currency"> { userPortfolio?.portfolio?.investor?.currencyCode} </Card.Title>
                             <Card.Subtitle>{ t('Investor Account Currency') }</Card.Subtitle>
                         </div>
-                        <div class="px-2">
+                        <div className="px-2">
                             <Card.Title as="h3" className="card-currency"> { userPortfolio?.currencyCode} </Card.Title>
                             <Card.Subtitle>{ t('Valuation Currency') }</Card.Subtitle>
                         </div>
                     </div>
                 </Col>
                 <Col sm="4">
-                    <div class="welcome-bg-img mb-n7 text-end">
+                    <div className="welcome-bg-img mb-n7 text-end">
                         <Card.Img src="../images/welcome-bg.svg"  />
                     </div>
                 </Col>

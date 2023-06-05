@@ -8,17 +8,10 @@ import AuthedRoute from "components/Auth";
 import LoginPage from "pages/LoginV2/LoginV2";
 import DashboardPage from "pages/Dashboard/Dashboard";
 import StockDetailPage from "pages/StockDetail/StockDetail";
-
-
 import {
     importFromLocalStorageKey
 } from "./utils/LocalStorageApi";
 import _ from "lodash";
-
-import "./assets/css/index.scss";
-import './App.css';
-import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -32,6 +25,13 @@ import {
     ArcElement
 } from 'chart.js';
 import ChartDataLabels from "chartjs-plugin-datalabels";
+import { ToastContainer } from 'react-toastify';
+
+import "./assets/css/index.scss";
+import './App.css';
+import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 ChartJS.register(
     CategoryScale,
@@ -86,8 +86,23 @@ function App() {
                     <Route path={navigationConstants.STOCK_DETAIL+"/:id"} exact element={
                         <AuthedRoute component={<StockDetailPage currency={curr} />} changeCurrency={changeCurrency} />
                     } />
+                    <Route path={navigationConstants.ACCOUNT} exact element={
+                        <AuthedRoute component={<DashboardPage currency={curr} />} changeCurrency={changeCurrency} />
+                    } />
                 </Routes>
             </BrowserRouter>
+            <ToastContainer 
+                position={i18n.language=== 'en'?"top-right":"top-left"}
+                autoClose={5000}
+                limit={1}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"/>
         </Container>
   );
 }

@@ -6,6 +6,6 @@
     },{
         "id": 2,
         "name": "Account",
-        "link": "/"
+        "link": "/account"
     }
 ]
