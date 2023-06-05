@@ -117,7 +117,7 @@ function LoginV2() {
                         <Row>
                             <div className="error">{error}</div>
                         </Row>
-                        <Row className="my-2">
+                        <Row className="my-4">
                             <Col xs={12} sm={12} md={12} lg={12} className="text-right">
                                 <Button type="submit" className="submit-button">
                                     {('Login')}
