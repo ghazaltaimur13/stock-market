@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './i18n';
 import {AuthProvider} from "./contexts/AuthContext";
-import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

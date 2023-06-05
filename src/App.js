@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import * as navigationConstants from "constants/navigationConstants";
 import { useAuth } from "contexts/AuthContext";
 import AuthedRoute from "components/Auth";
-import LoginPage from "pages/Login/Login";
+import LoginPage from "pages/LoginV2/LoginV2";
 import DashboardPage from "pages/Dashboard/Dashboard";
 import StockDetailPage from "pages/StockDetail/StockDetail";
 
@@ -17,6 +17,8 @@ import _ from "lodash";
 
 import "./assets/css/index.scss";
 import './App.css';
+import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   const { authToken } = useAuth();
