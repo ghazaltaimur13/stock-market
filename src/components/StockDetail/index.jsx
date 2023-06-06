@@ -3,8 +3,7 @@ import { getUserPortfolio, getUserSecurity } from "services/UserInfoService";
 import { useTranslation } from "react-i18next";
 import {
     Row,
-    Col,
-    Card
+    Col
   } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router-dom";
 import StatsCard from "components/Dashboard/StatsCard"

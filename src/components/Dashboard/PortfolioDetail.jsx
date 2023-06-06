@@ -20,20 +20,20 @@ function PortfolioDetail(props) {
                             style={{ width: '50px', height: '50px' }} />
                         <Card.Title as="h4"> { t('Welcome') } { userPortfolio?.portfolio?.investor?.name}</Card.Title>
                     </div>
-                    <div className="d-flex align-items-center">
-                        <div className="card-detail px-2 border-muted border-opacity-10">
+                    <Row  className="d-flex align-items-center">
+                        <Col lg="4" className="card-detail px-2 border-muted border-opacity-10">
                             <Card.Title as="h3" className="card-currency"> { userPortfolio?.marketValue.toFixed(3)} </Card.Title>
                             <Card.Subtitle>{ t('Portfolio Value') }</Card.Subtitle>
-                        </div>
-                        <div className="card-detail px-2 border-muted border-opacity-10">
+                        </Col>
+                        <Col lg="4" className="card-detail px-2 border-muted border-opacity-10">
                             <Card.Title as="h3" className="card-currency"> { userPortfolio?.portfolio?.investor?.currencyCode} </Card.Title>
                             <Card.Subtitle>{ t('Investor Account Currency') }</Card.Subtitle>
-                        </div>
-                        <div className="px-2">
+                        </Col>
+                        <Col lg="4"  className="px-2">
                             <Card.Title as="h3" className="card-currency"> { userPortfolio?.currencyCode} </Card.Title>
                             <Card.Subtitle>{ t('Valuation Currency') }</Card.Subtitle>
-                        </div>
-                    </div>
+                        </Col>
+                    </Row>
                 </Col>
                 <Col sm="4">
                     <div className="welcome-bg-img mb-n7 text-end">

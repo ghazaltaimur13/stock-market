@@ -3,11 +3,9 @@ import LoginForm from "components/LoginV2";
 import { useAuth } from "contexts/AuthContext";
 import { Navigate } from "react-router-dom";
 import { DASHBOARD } from "constants/navigationConstants";
-import { useTranslation } from "react-i18next";
 
 function LoginPage() {
 	const { loggedIn } = useAuth();
-	const { t } = useTranslation();
 
 	return (loggedIn ? <Navigate to={DASHBOARD} />
 		:

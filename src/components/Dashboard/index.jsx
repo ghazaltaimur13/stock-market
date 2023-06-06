@@ -42,7 +42,7 @@ function Dashboard() {
     }
     
     return (
-        <div className="container-fluid p-0 w-100">
+        <div className="container-fluid w-100">
             <Row className="m-3">
                 <Col className="header-title">
                     { t('Portfolio Valuation')}

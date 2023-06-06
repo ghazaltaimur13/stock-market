@@ -66,6 +66,7 @@
         .card-currency {
             padding: 3px !important;
             font-weight: bold;
+            font-size: 20px;
         }
         .card-subtitle {
             color: #fff;
@@ -227,6 +228,20 @@
         }
 
     }
+    .submit-button{
+        color: #fff;
+        background-color: #34835b;
+        border-color: #34835b;
+        border-radius: 6px;
+        width: 100%;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        &:hover{
+            color: black;
+            background-color: white;
+        }
+    }
     .login-card{
         height: 370px;
         margin-top: auto;
@@ -263,20 +278,7 @@
             border-top-right-radius: 4px;
             border-bottom-right-radius: 4px;
         }
-        .submit-button{
-            color: #fff;
-            background-color: #34835b;
-            border-color: #34835b;
-            border-radius: 6px;
-            width: 100%;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            &:hover{
-                color: black;
-                background-color: white;
-            }
-        }
+        
             
         .card-header h3{
             color: white;
@@ -302,7 +304,7 @@
         .card-body {
             padding: 0px;
             .card-img {
-                height: 300px;
+                height: 250px;
             }
             .profile-center-area {
                 margin-top: -3rem;
@@ -310,15 +312,104 @@
             }
             .icon {
                 color: #34835b;
-                font-size: 30px;
+                font-size: 20px;
             }
             .card-title {
                 color: #fff;
             }
             .card-subtitle {
-                color: #fff;
+                color: gray;
                 font-size: 12px;
             }
+
+            .nav-tabs {
+                background: #34835b;
+                border: 0px;
+                .nav-link {
+                    background: unset;
+                    border: 0px;
+                    color: #c8c4c4;
+                    &.active {
+                        border-bottom: 1px solid #99b4a6;
+                        color: #fff;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .profile-form {
+                hr {
+                    color: gray;
+                }
+                .form-control {
+                    background-color: #6a6a6a !important;
+                    border: 0px;
+                    color: #fff;
+                    &::placeholder { 
+                        color: rgb(176, 175, 175);
+                        font-size: 12px;
+                        opacity: 1;
+                    }
+                }
+                .form-label {
+                    color: gray;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .dzu-dropzone {
+        background: #212121;
+        border: 1.4px dashed #7c7c7d;
+        border-radius: 10px;
+        min-height: 160px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .dzu-inputLabel, .dzu-inputLabelWithFiles {
+            .upload-files {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .dropbox-text {
+                    color: #fff;
+                    font-weight: 400;
+                    font-size: 12px;
+                }
+                .dropbox-button {
+                    background-color: #34835b;
+                    color: white;
+                    border: 0;
+                    font-size: 12px;
+                }
+                .dropbox-upload {
+                    width: 40px;
+                }
+            }
+        }
+
+        .dzu-input {
+            display: none !important;
+        }
+    }
+
+    .dzu-previewContainer {
+        height: 115px;
+        margin: 20px;
+        text-align: center;
+        .dzu-previewImage {
+            height: inherit;
+        }
+    }
+
+    .tab-content {
+        .tab-pane {
+            color: white;
+            padding: 20px;
         }
     }
 }
@@ -336,6 +427,7 @@
     .container-width {
       width: 100%;
     }
+
   
     .mb-hide {
       display: none !important;
@@ -352,6 +444,28 @@
             }
         }
     }
+    .profile-form { 
+        .row, .profile-col {
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+        .profile-col {
+            margin-top: 5px !important;
+            margin-bottom: 5px !important;
+        }
+        &.container {
+            max-width: 100% !important;
+        }
+    }
+    .card-profile {
+        .profile-center-area{
+            position: absolute !important;
+            margin-top: -300px !important;
+        }
+    }
+    
 }
 
 
